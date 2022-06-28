@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+.root{
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://cdn.pixabay.com/photo/2017/09/16/16/40/netherlands-2755996_960_720.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+
+}
+a {
+    text-decoration: none;
+    /* color: white; */
+}
+.d-flex{
+    display: flex;
+}
+.jc-space-between{
+    justify-content: space-between;
+}
+.ai-center{
+    align-items: center;
+}
+.nav-style{
+    height: 85px;
+    padding: 0 20px;
+}
+.logo-image{
+    transform: scale(0.8);
+}
+.hamburger{
+    position: fixed;
+    display: none;
+}
+.nav-links{
+    list-style-type: none;
+    font-size: 0.1rem;
+}
+.nav-links-items{
+    margin: 0 10px;
+    padding: 5px 0;
+    cursor: pointer;
+}
+.nav-links-items:hover{
+    border-bottom: 1px solid rgb(211, 0, 2);
+}
+.nav-links-items span{
+    font-size: 0.8rem;
+}
+.nav-links-items span:hover{
+    color: rgb(211, 0, 2);
+}
+.text{
+    margin-top: 300px;
+    font-size: 3.3rem;
+    text-align: center;
+    font-weight: 500;
+}
+.last-section{
+    flex-direction: column;
+    position: fixed;
+    bottom: 3%;
+    font-size: 0.2rem;
+    justify-content: center;
+}
+.last-section.active{
+transform: translateY(70px);
+}
+.links{
+    background-color: rgb(211, 0, 2);
+    height: 60px;
+    border-radius: 100px;
+    margin: 0 auto;
+}
+.link-item{
+    padding: 5px 20px;
+    /* font-size: 0.4rem; */
+}
+.link-item:hover {
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+}
+.link-item:not(:last-child) {
+    margin-right: 5px;
+}
+.link-item:last-child{
+    margin-right: 7px;
+}
+.link-item-style{
+    font-size: 0.8rem;
+    position: relative;
+    bottom: 4px ;
+    left: 5px;
+}
+.v-upside{
+    background-color:rgb(211, 0, 2) ;
+    transform: translateY(5px);
+    color: white;
+    cursor: pointer;
+    padding: 0 8px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+
+}
+.v-upside.active{
+
+    transform: rotate(180deg) translateY(-5px);
+    
+}
+.hambuger-menu{
+    bottom: -100%;
+    transition: all 0.1s ease-in-out;
+    position: fixed;
+}
+.line{
+    align-self: center;
+    height: 4px;
+    background-color: rgb(199, 194, 194);
+    position: relative;
+    bottom: 18px;
+}
+.nav-position-style{
+    line-height: 150%;
+    margin: 20px 0;
+    justify-self: stretch;
+    width: 100%;
+    transform: all 0.1s; 
+}
+
+.margin-right8{
+    margin-right: 8px;
+}
+.menu-text{
+    color: black;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    display: block;
+    width: 100%;
+}
+.menu-text:hover{
+    color: blue;
+}
+.menu-text-sub{
+    font-size: 0.6rem;
+    position: relative;
+    bottom: 6px;
+    color: black;
+}
+
+.col-1{width:8.33%;}
+.col-2{width:16.66%;}
+.col-3{width:24.99%;}
+.col-4{width:33.32%;}
+.col-5{width:41.65%;}
+.col-6{width:49.98%;}
+.col-7{width:53.31%;}
+.col-8{width:66.64%;}
+.col-9{width:74.97%;}
+.col-10{width:83.30%;}
+.col-11{width:91.63%;}
+.col-12{width:99.96%;}
+
+@media all and (max-width:1190px) {
+    .logo-image{
+        display: none;
+    }
+    .nav-links{
+        display: none;
+    }
+    .hamburger{
+        display: flex;
+    }
+    .hambuger-menu.active{
+        flex-direction: column;
+        z-index: 2;
+        background-color: white;
+        color: black;
+        width: 100%;
+        position: fixed;
+        top: 30%;
+        height: 70%;
+        padding: 30px;
+        border-radius: 30px 30px 0px 0px;
+        bottom: 0;
+    }
+}
+@media all and (max-width: 988px){
+    .text{
+        font-size: 2rem;
+        margin-top: 350px;
+    }
+}
+
+@media all and (max-width:660px) {
+    .account{
+        display: none;
+    }
+    .speeches{
+        display: none;
+    }
+    .text{
+        font-size: 1.5rem;
+    }
+    .links-font-size {
+        font-size: 0.7rem;
+    }
+    .link-images{
+        transform: scale(0.8);
+    }
+    
+}
